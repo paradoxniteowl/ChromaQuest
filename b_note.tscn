@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn8gb6t73107g"]
+
+[ext_resource type="Texture2D" uid="uid://dclf5boopqbk6" path="res://b_png.png" id="1_h7ivy"]
+[ext_resource type="Script" path="res://b_note.gd" id="2_21v30"]
+[ext_resource type="AudioStream" uid="uid://bv5n58susky7e" path="res://Hear Piano Note - Mid B-[AudioTrimmer.com].mp3" id="3_nobo5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdu4n"]
+size = Vector2(451.592, 527.218)
+
+[node name="b_note" type="Sprite2D"]
+scale = Vector2(0.212581, 0.178294)
+texture = ExtResource("1_h7ivy")
+script = ExtResource("2_21v30")
+
+[node name="b_collect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b_collect"]
+position = Vector2(0, -5.6087)
+shape = SubResource("RectangleShape2D_xdu4n")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="b_collect"]
+stream = ExtResource("3_nobo5")
+
+[connection signal="body_entered" from="b_collect" to="." method="_on_b_collect_body_entered"]

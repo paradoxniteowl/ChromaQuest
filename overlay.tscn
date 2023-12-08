@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsv68yxyiqx4j"]
+
+[ext_resource type="Script" path="res://overlay.gd" id="1_ivlx6"]
+
+[node name="overlay" type="CanvasLayer"]
+script = ExtResource("1_ivlx6")
+
+[node name="harmony" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="notes" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="mode" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

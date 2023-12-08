@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co3wuxids314j"
+path="res://.godot/imported/Hear Piano Note - Mid G-[AudioTrimmer.com].mp3-0cb4bb85b5bba49eee4ff071641d2e77.mp3str"
+
+[deps]
+
+source_file="res://Hear Piano Note - Mid G-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Hear Piano Note - Mid G-[AudioTrimmer.com].mp3-0cb4bb85b5bba49eee4ff071641d2e77.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

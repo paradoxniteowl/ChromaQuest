@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4vsmqqd82e7y"
+path="res://.godot/imported/Hear Piano Note - Mid D-[AudioTrimmer.com].mp3-cdf45de03cd7112083c85ec44e493855.mp3str"
+
+[deps]
+
+source_file="res://Hear Piano Note - Mid D-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Hear Piano Note - Mid D-[AudioTrimmer.com].mp3-cdf45de03cd7112083c85ec44e493855.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

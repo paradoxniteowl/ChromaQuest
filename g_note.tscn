@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://btbpt08yam3vk"]
+
+[ext_resource type="Texture2D" uid="uid://doundsjiqt280" path="res://g_png.png" id="1_y2rbp"]
+[ext_resource type="Script" path="res://g_note.gd" id="2_ahpxu"]
+[ext_resource type="AudioStream" uid="uid://co3wuxids314j" path="res://Hear Piano Note - Mid G-[AudioTrimmer.com].mp3" id="3_r00cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfmfl"]
+size = Vector2(192.208, 241.812)
+
+[node name="g_note" type="Sprite2D"]
+scale = Vector2(0.447431, 0.413544)
+texture = ExtResource("1_y2rbp")
+script = ExtResource("2_ahpxu")
+
+[node name="g_collect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g_collect"]
+position = Vector2(2.66431e-06, -2.41812)
+shape = SubResource("RectangleShape2D_xfmfl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="g_collect"]
+stream = ExtResource("3_r00cr")
+
+[connection signal="body_entered" from="g_collect" to="." method="_on_g_collect_body_entered"]

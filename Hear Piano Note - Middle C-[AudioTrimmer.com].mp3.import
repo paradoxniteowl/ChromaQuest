@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db4s0j6l1aeia"
+path="res://.godot/imported/Hear Piano Note - Middle C-[AudioTrimmer.com].mp3-a16c60ba84bc9a1cbd21b270835fa6f1.mp3str"
+
+[deps]
+
+source_file="res://Hear Piano Note - Middle C-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Hear Piano Note - Middle C-[AudioTrimmer.com].mp3-a16c60ba84bc9a1cbd21b270835fa6f1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
