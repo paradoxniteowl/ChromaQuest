@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://bxsv6aph8a46h"]
+[gd_scene load_steps=19 format=3 uid="uid://bxsv6aph8a46h"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_jg1vu"]
 [ext_resource type="Texture2D" uid="uid://d2c68weixqg06" path="res://block.png" id="1_rd1kk"]
 [ext_resource type="Texture2D" uid="uid://dhsbbbuj1r6pe" path="res://door.png" id="2_fesie"]
 [ext_resource type="PackedScene" uid="uid://vh7jy1hiyuf1" path="res://player.tscn" id="2_pwkbh"]
 [ext_resource type="PackedScene" uid="uid://bwwidu12ww4v5" path="res://a_note.tscn" id="4_g6fv0"]
+[ext_resource type="Texture2D" uid="uid://c5ejvl1kg6wk" path="res://block2.png" id="4_ypo27"]
 [ext_resource type="PackedScene" uid="uid://dn8gb6t73107g" path="res://b_note.tscn" id="5_70x2n"]
 [ext_resource type="PackedScene" uid="uid://druwnpixqrrol" path="res://c_note.tscn" id="6_4osx2"]
 [ext_resource type="PackedScene" uid="uid://qqtxmm5le6ls" path="res://d_note.tscn" id="7_duwvt"]
@@ -2446,6 +2448,7 @@ texture = SubResource("CompressedTexture2D_bnjrc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j0tkg"]
 texture = ExtResource("1_rd1kk")
+0:0/next_alternative_id = 3
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -4710,13 +4713,21 @@ texture = ExtResource("2_fesie")
 20:36/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 20:36/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0t60"]
+texture = ExtResource("4_ypo27")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_wrlxk"]
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_j0tkg")
 sources/0 = SubResource("TileSetAtlasSource_bge3q")
 sources/2 = SubResource("TileSetAtlasSource_s0vm2")
+sources/3 = SubResource("TileSetAtlasSource_v0t60")
 
 [node name="world" type="Node2D"]
+script = ExtResource("1_jg1vu")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wrlxk")
@@ -4731,7 +4742,7 @@ scale = Vector2(0.237638, 0.242018)
 zoom = Vector2(3, 3)
 
 [node name="a_note" parent="." instance=ExtResource("4_g6fv0")]
-position = Vector2(240, 555)
+position = Vector2(227, 324)
 scale = Vector2(0.234413, 0.234931)
 
 [node name="b_note" parent="." instance=ExtResource("5_70x2n")]
@@ -4751,9 +4762,9 @@ position = Vector2(717, 491)
 scale = Vector2(0.243699, 0.23909)
 
 [node name="f_note" parent="." instance=ExtResource("9_2vlr8")]
-position = Vector2(421, 230)
+position = Vector2(509, 167)
 scale = Vector2(0.117194, 0.107678)
 
 [node name="g_note" parent="." instance=ExtResource("10_2jxr7")]
-position = Vector2(810, 447)
+position = Vector2(1078, 396)
 scale = Vector2(0.213816, 0.195666)
