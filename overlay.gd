@@ -1,12 +1,15 @@
 extends CanvasLayer
 
-var harmony = ""
-current_scene = get_tree()
+var current_scene = get_tree().get_current_scene()
+var collected_notes = {}
 
 func _process(delta):
-	$harmony.text = "Current Harmony: " + 
+	if current_scene.is_a("world"):
+		$harmony.text = "Harmony: Diatonic C Chord - CEG"
 	$notes.text = "Notes collected: " + 
-	if Global.current_state = Global.MusicState.NAT:
+	if GlobalMusicState.NAT:
 		$mode.text = "Mode: Natural"
-	elif Global.current_state = Global.MusicState.FLAT:
-		
+	elif Global.MusicState.FLAT:
+		$mode.text = "Mode: Flat"
+	elif Global.MusicState.SHARP:
+		$mode.text = "Mode: Sharp"
