@@ -1,10 +1,17 @@
 extends Node2D
 
-@onready var tilemap = get_node("TileMap")
+@onready var a_note = $a_note
+@onready var b_note = $b_note
+@onready var c_note = $c_note
+@onready var d_note = $d_note
+@onready var e_note = $e_note
+@onready var f_note = $f_note
+@onready var g_note = $g_note
 
-func replace_floor():
-	var used_rect = tilemap.get_used_rect()
-	for x in range(used_rect.size.x):
-		for y in range(used_rect.size.y):
-			if tilemap.get_cell(x, y) == tilemap.tile_set.find_tile_by_name("block.png"):
-				tilemap.set_cell(x, Vector2i(x, y), tilemap.tile_set.find_tile_by_name("block2.png"))
+
+
+func _process(delta):
+	if a_note.a_collected or b_note.b_collected or d_note.d_collected or f_note.f_collected:
+		get_tree().change_scene_to_file("res://fail.tscn")
+	if c_note.c_collected and e_note.e_collected and g_note.g_collected:
+		get_tree().change_scene_to_file("res://end.tscn")

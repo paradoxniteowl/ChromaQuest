@@ -3,16 +3,15 @@
 [ext_resource type="Script" path="res://overlay.gd" id="1_ivlx6"]
 
 [node name="overlay" type="CanvasLayer"]
+layer = 0
 script = ExtResource("1_ivlx6")
 
 [node name="harmony" type="Label" parent="."]
+offset_top = 4.0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 27.0
 
 [node name="notes" type="Label" parent="."]
+offset_top = 37.0
 offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="mode" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 60.0

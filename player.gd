@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+@onready var c_note = $c_note
+@onready var e_note = $e_note
+@onready var g_note = $g_note
+
 var is_jumping: bool = false
 const SPEED: float = 300.0
 const JUMP_VELOCITY: float = -400.0

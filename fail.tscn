@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgg426mnodo5n"]
+
+[ext_resource type="Script" path="res://fail.gd" id="1_vfkay"]
+
+[node name="fail" type="CanvasLayer"]
+script = ExtResource("1_vfkay")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 164.0
+offset_top = 205.0
+offset_right = 987.0
+offset_bottom = 403.0
+theme_override_font_sizes/font_size = 70
+text = "You ruined the harmony
+ and lost color forever..."
+
+[node name="try_again" type="Button" parent="."]
+offset_left = 393.0
+offset_top = 435.0
+offset_right = 797.0
+offset_bottom = 478.0
+theme_override_font_sizes/font_size = 27
+text = "Try Again"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 393.0
+offset_top = 504.0
+offset_right = 797.0
+offset_bottom = 549.0
+theme_override_font_sizes/font_size = 27
+text = "Quit"
+
+[connection signal="pressed" from="try_again" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
